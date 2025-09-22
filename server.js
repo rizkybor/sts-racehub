@@ -33,7 +33,7 @@ io.on('connection', (socket) => {
   // Button test: ke semua klien
   socket.on('custom:event', (msg) => {
     console.log('[broker] custom:event =>', msg);
-    io.emit('custom:event', msg);     // broadcast global
+    io.emit('custom:event', msg);
   });
 
   // (Opsional) Room by eventId
