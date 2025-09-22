@@ -19,7 +19,7 @@ const io = new Server(httpServer, {
 io.use((socket, next) => {
   try {
     const token = socket.handshake.auth?.token || socket.handshake.headers['x-access-token'];
-    if (!token) return next(); // izinkan tanpa token saat dev
+    if (!token) return next();
     jwt.verify(token, JWT_SECRET);
     next();
   } catch (e) {
@@ -30,7 +30,7 @@ io.use((socket, next) => {
 io.on('connection', (socket) => {
   console.log('[broker] connected:', socket.id);
 
-  // Button test: pantulkan ke semua klien
+  // Button test: ke semua klien
   socket.on('custom:event', (msg) => {
     console.log('[broker] custom:event =>', msg);
     io.emit('custom:event', msg);     // broadcast global
