@@ -6,7 +6,7 @@ import jwt from 'jsonwebtoken';
 
 const {
   PORT = 4000,
-  CORS_ORIGINS = 'http://localhost:3000,http://localhost:5173',
+  CORS_ORIGINS = 'http://localhost:3000,http://localhost:8080',
   JWT_SECRET = 'dev-secret'
 } = process.env;
 
