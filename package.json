@@ -1,17 +1,14 @@
 {
-  "name": "sts-racehub",
+  "name": "realtime-broker",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "type": "module",
+  "private": true,
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node server.js"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
   "dependencies": {
-    "dotenv": "^17.2.2",
+    "dotenv": "^16.4.5",
     "jsonwebtoken": "^9.0.2",
-    "socket.io": "^4.8.1"
+    "socket.io": "^4.7.5"
   }
 }
